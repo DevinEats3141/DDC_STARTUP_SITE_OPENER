@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fun Site :)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Open the funny site</h1>
+  <button onclick="openGame(userdata_1)">Launch</button>
+
+  <script>
+    userdata_1 = window.atob(window.atob("YUhSMGNITTZMeTlrWlhaa1kyOXljQzFqWVRZMk15NTNaV0l1WVhCd0x3PT0="))
+    function openGame(url) {
+        var win = window.open();
+        var iframe = document.createElement("iframe")
+        iframe.style.border = "none";
+        iframe.style.width = "100%";
+        iframe.style.height = "100%"
+        iframe.style.margin = "0";
+        iframe.src = url;
+        win.document.body.appendChild(iframe);
+    }
+
+  </script>
+</body>
+</html>
